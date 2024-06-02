@@ -1,0 +1,14 @@
+version: "3.8"
+services:
+  app:
+    build:
+      args:
+        PHP_MODE: development
+
+  httpd:
+    ports:
+      - 8090:80
+
+  db:
+    ports:
+      - 3308:3306

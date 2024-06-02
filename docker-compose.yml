@@ -1,0 +1,36 @@
+version: "3.8"
+services:
+  app:
+    build:
+      context: .
+      args:
+        PHP_MODE: development
+    restart: unless-stopped
+    volumes:
+      - ./:/app
+    environment:
+      TZ: Asia/Manila
+    networks:
+      - default
+
+  httpd:
+    build:
+      dockerfile: ./docker/httpd/Dockerfile
+    restart: unless-stopped
+    depends_on:
+      - app
+
+  db:
+    image: mysql:8.0
+    restart: unless-stopped
+    volumes:
+      - db:/var/lib/mysql
+    environment:
+      TZ: Asia/Manila
+      MYSQL_DATABASE: task_management_system
+      MYSQL_ROOT_PASSWORD: secret
+    networks:
+      - default
+
+volumes:
+  db:
