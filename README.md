@@ -17,10 +17,12 @@ php artisan serve
 ![artisan-serve](https://github.com/qjrincoywork/task_management_system/assets/61674249/3f1a89f7-403b-4d91-8102-fb4dd697b71f)
 
 ## NPM Install
-cd task-management-ui
-npm install
-npm run dev
+ - cd task-management-ui
+ - npm install
+ - npm run dev
+
 ![npm-run-dev-in-the-ui-directory](https://github.com/qjrincoywork/task_management_system/assets/61674249/eb461d99-eb7e-4370-81e4-1910de3a90cc)
+
 ## Note 
 Please don't forget to modify/create env files.
 ## Once Up and Running it will look like the images below
